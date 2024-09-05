@@ -4,41 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { StarIcon } from "lucide-react";
+import { useFormatter, useTranslations } from "next-intl";
+import { LanguageSelector } from "./language-selector";
 
 export default function PortfolioPage() {
+  const t = useTranslations("HomePage");
+  const format = useFormatter();
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 max-w-screen-2xl items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold">Ravi</span>
-          </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#skills"
-            >
-              Skills
+          <nav className="mx-auto flex gap-2">
+            <Link href="#about">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t("navigation.about")}
+              </Button>
             </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#projects"
-            >
-              Projects
+            <Link href="#skills">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t("navigation.skills")}
+              </Button>
             </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#testimonials"
-            >
-              Testimonials
+            <Link href="#projects">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t("navigation.projects")}
+              </Button>
             </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#contact"
-            >
-              Contact
+            <Link href="#testimonials">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t("navigation.testimonials")}
+              </Button>
             </Link>
+            <Link href="#contact">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t("navigation.contact")}
+              </Button>
+            </Link>
+            <LanguageSelector />
           </nav>
         </div>
       </header>
@@ -49,30 +52,60 @@ export default function PortfolioPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Ravi
+                    {t("hero.title")}
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Web Developer & Consultant. Transforming ideas into powerful
-                    digital solutions.
+                    {t("hero.subtitle")}
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="#contact">
-                    <Button>Hire Me</Button>
+                    <Button>{t("hero.hireMe")}</Button>
                   </Link>
                   <Link href="#projects">
-                    <Button variant="outline">View Projects</Button>
+                    <Button variant="outline">{t("hero.viewProjects")}</Button>
                   </Link>
                 </div>
               </div>
               <Image
                 alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto overflow-hidden rounded-full border-4 border-purple-300 shadow-lg object-cover object-center sm:w-full lg:order-last"
                 height="550"
-                src="/placeholder.svg"
+                src="/img/ravi.png"
                 width="550"
               />
             </div>
+          </div>
+        </section>
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
+              {t("about.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6 whitespace-pre-line text-balance">
+              {t.rich("about.description", {
+                years: "7",
+                subscribers: format.number(10000),
+                edgestore: (children) => (
+                  <Link
+                    href="https://edgestore.dev"
+                    target="_blank"
+                    className="underline font-medium"
+                  >
+                    {children}
+                  </Link>
+                ),
+                youtube: (children) => (
+                  <Link
+                    href="https://www.youtube.com/@perfectbase"
+                    target="_blank"
+                    className="underline font-medium"
+                  >
+                    {children}
+                  </Link>
+                ),
+              })}
+            </p>
           </div>
         </section>
         <section
@@ -81,44 +114,46 @@ export default function PortfolioPage() {
         >
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              Skills
+              {t("skills.title")}
             </h2>
             <div className="grid gap-6 lg:grid-cols-3">
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-2">
-                    Frontend Development
+                    {t("skills.frontend.title")}
                   </h3>
                   <p className="text-muted-foreground">
-                    React, Next.js, TypeScript, Tailwind CSS
+                    {t("skills.frontend.description")}
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-2">
-                    Backend Development
+                    {t("skills.backend.title")}
                   </h3>
                   <p className="text-muted-foreground">
-                    Node.js, Express, PostgreSQL, MongoDB
+                    {t("skills.backend.description")}
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">DevOps & Cloud</h3>
+                  <h3 className="text-2xl font-bold mb-2">
+                    {t("skills.devops.title")}
+                  </h3>
                   <p className="text-muted-foreground">
-                    Docker, AWS, CI/CD, Vercel
+                    {t("skills.devops.description")}
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              Projects
+              {t("projects.title")}
             </h2>
             <div className="grid gap-6 lg:grid-cols-2">
               {[1, 2, 3, 4].map((project) => (
@@ -132,13 +167,14 @@ export default function PortfolioPage() {
                       width="400"
                     />
                     <h3 className="text-2xl font-bold mb-2">
-                      Project {project}
+                      {t("projects.projectTitle", { number: project })}
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Description of project {project}. Explain the challenge,
-                      solution, and results.
+                      {t("projects.projectDescription", { number: project })}
                     </p>
-                    <Button variant="outline">View Project</Button>
+                    <Button variant="outline">
+                      {t("projects.viewProject")}
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -151,74 +187,57 @@ export default function PortfolioPage() {
         >
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              Testimonials
+              {t("testimonials.title")}
             </h2>
             <div className="grid gap-6 lg:grid-cols-2">
               {[1, 2].map((testimonial) => (
-                <Card key={testimonial}>
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <StarRating rating={5} />
-                    </div>
-                    <p className="text-muted-foreground mb-4">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua."
-                    </p>
-                    <div className="flex items-center">
-                      <Image
-                        alt={`Client ${testimonial}`}
-                        className="rounded-full mr-4"
-                        height="40"
-                        src="/placeholder.svg"
-                        style={{
-                          aspectRatio: "40/40",
-                          objectFit: "cover",
-                        }}
-                        width="40"
-                      />
-                      <div>
-                        <p className="font-semibold">Client Name</p>
-                        <p className="text-sm text-muted-foreground">Company</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <TestimonialCard
+                  key={testimonial}
+                  rating={5}
+                  testimonial={t("testimonials.testimonial")}
+                  clientName={t("testimonials.clientName")}
+                  company={t("testimonials.company")}
+                  image="/placeholder.svg"
+                />
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              Contact Me
+              {t("contact.title")}
             </h2>
             <form className="max-w-md mx-auto">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <label htmlFor="name">Name</label>
-                  <Input id="name" placeholder="Your name" required />
+                  <label htmlFor="name">{t("contact.name")}</label>
+                  <Input
+                    id="name"
+                    placeholder={t("contact.namePlaceholder")}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">{t("contact.email")}</label>
                   <Input
                     id="email"
-                    placeholder="Your email"
+                    placeholder={t("contact.emailPlaceholder")}
                     required
                     type="email"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">{t("contact.message")}</label>
                   <Textarea
                     className="min-h-[100px]"
                     id="message"
-                    placeholder="Your message"
+                    placeholder={t("contact.messagePlaceholder")}
                     required
                   />
                 </div>
                 <Button className="w-full" type="submit">
-                  Send Message
+                  {t("contact.sendMessage")}
                 </Button>
               </div>
             </form>
@@ -226,28 +245,16 @@ export default function PortfolioPage() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">
-          © 2023 Perfect Base. All rights reserved.
-        </p>
+        <p className="text-xs text-muted-foreground">{t("footer.copyright")}</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
+            {t("footer.termsOfService")}
           </Link>
           <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
+            {t("footer.privacy")}
           </Link>
         </nav>
       </footer>
-    </div>
-  );
-}
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center">
-      {[...Array(rating)].map((_, index) => (
-        <StarIcon key={index} className="text-yellow-500" fill="currentColor" />
-      ))}
     </div>
   );
 }

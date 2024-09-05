@@ -1,0 +1,58 @@
+{
+  "HomePage": {
+    "navigation": {
+      "skills": "スキル",
+      "projects": "プロジェクト",
+      "testimonials": "お客様の声",
+      "contact": "お問い合わせ"
+    },
+    "hero": {
+      "title": "Ravi (ハヴィー)",
+      "subtitle": "ウェブ開発者＆コンサルタント。アイデアを強力なデジタルソリューションに変換します。",
+      "hireMe": "依頼する",
+      "viewProjects": "プロジェクトを見る"
+    },
+    "skills": {
+      "title": "スキル",
+      "frontend": {
+        "title": "フロントエンド開発",
+        "description": "React、Next.js、TypeScript、Tailwind CSS"
+      },
+      "backend": {
+        "title": "バックエンド開発",
+        "description": "Node.js、Express、PostgreSQL、MongoDB"
+      },
+      "devops": {
+        "title": "DevOps＆クラウド",
+        "description": "Docker、AWS、CI/CD、Vercel"
+      }
+    },
+    "projects": {
+      "title": "プロジェクト",
+      "projectTitle": "プロジェクト{{number}}",
+      "projectDescription": "プロジェクト{{number}}の説明。課題、解決策、結果について説明します。",
+      "viewProject": "プロジェクトを見る"
+    },
+    "testimonials": {
+      "title": "お客様の声",
+      "testimonial": "ここにお客様の声が入ります。プロジェクトの成果や協力の経験について述べられます。",
+      "clientName": "クライアント名",
+      "company": "会社名"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "name": "お名前",
+      "namePlaceholder": "あなたのお名前",
+      "email": "メールアドレス",
+      "emailPlaceholder": "あなたのメールアドレス",
+      "message": "メッセージ",
+      "messagePlaceholder": "あなたのメッセージ",
+      "sendMessage": "メッセージを送信"
+    },
+    "footer": {
+      "copyright": "© 2023 Perfect Base. All rights reserved.",
+      "termsOfService": "利用規約",
+      "privacy": "プライバシーポリシー"
+    }
+  }
+}

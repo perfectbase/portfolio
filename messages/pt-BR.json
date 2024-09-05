@@ -1,0 +1,63 @@
+{
+  "HomePage": {
+    "navigation": {
+      "about": "Sobre",
+      "skills": "Skills",
+      "projects": "Projetos",
+      "testimonials": "Depoimentos",
+      "contact": "Contato"
+    },
+    "hero": {
+      "title": "Ravi",
+      "subtitle": "Desenvolvedor Web & Consultor. Transformando ideias em poderosas soluções digitais.",
+      "hireMe": "Contrate-me",
+      "viewProjects": "Ver Projetos"
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Olá! Sou um desenvolvedor web brasileiro e arquiteto de sistemas baseado em Tóquio, onde tenho trabalhado em tempo integral em empresas japonesas por mais de {years} anos. Fluente em inglês, português e japonês, adoro programar e compartilhar meu conhecimento.\n\nQuando tenho tempo livre, às vezes crio conteúdo para o meu <youtube>canal do YouTube</youtube>, onde falo sobre desenvolvimento web com mais de {subscribers} inscritos. Também sou o criador do <edgestore>Edge Store</edgestore>, um serviço SaaS com milhares de usuários projetado para simplificar o upload de arquivos em projetos usando React/Next.js."
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": {
+        "title": "Desenvolvimento Frontend",
+        "description": "React, Next.js, TypeScript, Tailwind CSS"
+      },
+      "backend": {
+        "title": "Desenvolvimento Backend",
+        "description": "Node.js, Express, PostgreSQL, MongoDB"
+      },
+      "devops": {
+        "title": "DevOps & Cloud",
+        "description": "Docker, AWS, CI/CD, Vercel"
+      }
+    },
+    "projects": {
+      "title": "Projetos",
+      "projectTitle": "Projeto {{number}}",
+      "projectDescription": "Descrição do projeto {{number}}. Explique o desafio, a solução e os resultados.",
+      "viewProject": "Ver Projeto"
+    },
+    "testimonials": {
+      "title": "Depoimentos",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "clientName": "Nome do Cliente",
+      "company": "Empresa"
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "Seu e-mail",
+      "message": "Mensagem",
+      "messagePlaceholder": "Sua mensagem",
+      "sendMessage": "Enviar Mensagem"
+    },
+    "footer": {
+      "copyright": "© 2023 Perfect Base. Todos os direitos reservados.",
+      "termsOfService": "Termos de Serviço",
+      "privacy": "Privacidade"
+    }
+  }
+}

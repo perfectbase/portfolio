@@ -1,0 +1,63 @@
+{
+  "HomePage": {
+    "navigation": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Ravi",
+      "subtitle": "Web Developer & Consultant. Transforming ideas into powerful digital solutions.",
+      "hireMe": "Hire Me",
+      "viewProjects": "View Projects"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Hey there! I'm a Brazilian web developer and system architect based in Tokyo, where I’ve been working full-time in Japanese companies for over {years} years. Fluent in English, Portuguese, and Japanese, I love coding and sharing my knowledge.\n\nWhen I have free time, I sometimes create content for my <youtube>YouTube channel</youtube>, where I talk about web development with over {subscribers} subscribers. I’m also the creator of <edgestore>Edge Store</edgestore>, a SaaS service with thousands of users designed to simplify file uploads for React/Next.js projects."
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "React, Next.js, TypeScript, Tailwind CSS"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Node.js, Express, PostgreSQL, MongoDB"
+      },
+      "devops": {
+        "title": "DevOps & Cloud",
+        "description": "Docker, AWS, CI/CD, Vercel"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "projectTitle": "Project {{number}}",
+      "projectDescription": "Description of project {{number}}. Explain the challenge, solution, and results.",
+      "viewProject": "View Project"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "clientName": "Client Name",
+      "company": "Company"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Your email",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "sendMessage": "Send Message"
+    },
+    "footer": {
+      "copyright": "© 2023 Perfect Base. All rights reserved.",
+      "termsOfService": "Terms of Service",
+      "privacy": "Privacy"
+    }
+  }
+}
