@@ -18,13 +18,14 @@ const languages = [
   { code: "ja", name: "日本語", flag: "/img/flags/ja.svg" },
 ];
 
-function LanguageSelector() {
+function LanguageSelector(props: { onChange?: (locale: string) => void }) {
   const locale = useLocale();
   const router = useRouter();
   const [, startTransition] = useTransition();
 
   const switchLanguage = async (newLocale: string) => {
     await setLanguage(newLocale);
+    props.onChange?.(newLocale);
     router.refresh();
   };
 

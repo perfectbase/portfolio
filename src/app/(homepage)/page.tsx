@@ -12,11 +12,18 @@ import GithubIcon from "@/components/icons/github-icon";
 import TwitterIcon from "@/components/icons/twitter-icon";
 import YouTubeIcon from "@/components/icons/youtube-icon";
 import { constants } from "@/lib/constants";
+import { Header } from "./_components/header";
+
+export type Section = {
+  id: string;
+  navigation: string;
+  component: React.FC<{ id: string; className?: string }>;
+};
 
 export default function PortfolioPage() {
   const t = useTranslations("HomePage");
 
-  const sections = [
+  const sections: Section[] = [
     {
       id: "about",
       navigation: t("navigation.about"),
@@ -51,20 +58,12 @@ export default function PortfolioPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="flex h-14 items-center">
-          <nav className="mx-auto flex gap-2">
-            {sections.map((section) => (
-              <Link key={section.id} href={`#${section.id}`}>
-                <Button variant="ghost" className="text-sm font-medium">
-                  {section.navigation}
-                </Button>
-              </Link>
-            ))}
-            <LanguageSelector />
-          </nav>
-        </div>
-      </header>
+      <Header
+        sections={sections.map((section) => ({
+          id: section.id,
+          navigation: section.navigation,
+        }))}
+      />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6">
