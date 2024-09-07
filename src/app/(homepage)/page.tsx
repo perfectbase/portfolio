@@ -118,10 +118,10 @@ export default function PortfolioPage() {
                   </Link>
                 </div>
               </div>
-              <div className="max-w-60 md:max-w-80 aspect-square md:aspect-[3/4] mx-auto p-4 w-full order-first lg:order-last">
+              <div className="relative max-w-60 md:max-w-80 aspect-square md:aspect-[3/4] mx-auto p-4 w-full order-first lg:order-last">
                 <Image
                   src="/img/ravi.png"
-                  className="overflow-hidden w-full h-full rounded-full md:rounded-3xl shadow-lg shadow-black/40 object-cover object-center lg:order-last"
+                  className="absolute inset-0 w-full h-full rounded-full md:rounded-3xl shadow-lg shadow-black/40 object-cover lg:order-last"
                   alt="Hero"
                   height="600"
                   width="600"
