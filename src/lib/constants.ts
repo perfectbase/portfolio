@@ -2,9 +2,9 @@ export const constants = {
   youtubeSubscribers: 10000,
   yearsWorkingInJapan: new Date().getFullYear() - 2017,
   links: {
-    youtube: "https://github.com/perfectbase",
+    youtube: "https://youtube.com/@perfectbase",
     twitter: "https://x.com/RaviCoding",
-    github: "https://youtube.com/@perfectbase",
+    github: "https://github.com/perfectbase",
     edgestore: "https://edgestore.dev",
   },
 };

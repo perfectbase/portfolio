@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { LanguageSelector } from "./_components/language-selector";
 import { SkillsSection } from "./_sections/skills-section";
 import { PortfolioSection } from "./_sections/portfolio-section";
 import { ContactSection } from "./_sections/contact-section";
