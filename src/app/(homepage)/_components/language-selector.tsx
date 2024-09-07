@@ -42,11 +42,13 @@ function LanguageSelector() {
       }
     >
       <SelectTrigger className="border-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent bg-transparent">
-        <div className="w-5 h-5 relative">
+        <div className="w-5 h-5 relative flex items-center justify-center">
           <Image
             src={currentLanguage?.flag || ""}
             alt={currentLanguage?.name || ""}
-            fill
+            width={20}
+            height={20}
+            className="shadow-sm shadow-black/30"
           />
         </div>
       </SelectTrigger>
@@ -54,8 +56,14 @@ function LanguageSelector() {
         {languages.map((language) => (
           <SelectItem key={language.code} value={language.code}>
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 relative">
-                <Image src={language.flag} alt={language.name} fill />
+              <div className="w-5 h-5 relative flex items-center justify-center">
+                <Image
+                  src={language.flag}
+                  alt={language.name}
+                  width={20}
+                  height={20}
+                  className="shadow-sm shadow-black/30"
+                />
               </div>
               {language.name}
             </div>
