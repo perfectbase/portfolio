@@ -3,46 +3,77 @@
     "navigation": {
       "about": "Sobre",
       "skills": "Skills",
-      "projects": "Projetos",
+      "portfolio": "Portfólio",
       "testimonials": "Depoimentos",
+      "services": "Serviços",
       "contact": "Contato"
     },
     "hero": {
-      "title": "Ravi",
-      "subtitle": "Desenvolvedor Web & Consultor. Transformando ideias em poderosas soluções digitais.",
-      "hireMe": "Contrate-me",
-      "viewProjects": "Ver Projetos"
+      "title": "Olá, eu sou o Ravi!",
+      "subtitle": "Um Desenvolvedor Web e Arquiteto de Sistemas baseado em Tóquio.",
+      "hireMe": "Solicitar um Trabalho",
+      "viewPortfolio": "Ver Portfólio"
     },
     "about": {
       "title": "Sobre",
-      "description": "Olá! Sou um desenvolvedor web brasileiro e arquiteto de sistemas baseado em Tóquio, onde tenho trabalhado em tempo integral em empresas japonesas por mais de {years} anos. Fluente em inglês, português e japonês, adoro programar e compartilhar meu conhecimento.\n\nQuando tenho tempo livre, às vezes crio conteúdo para o meu <youtube>canal do YouTube</youtube>, onde falo sobre desenvolvimento web com mais de {subscribers} inscritos. Também sou o criador do <edgestore>Edge Store</edgestore>, um serviço SaaS com milhares de usuários projetado para simplificar o upload de arquivos em projetos usando React/Next.js."
+      "description": "Olá! Sou um desenvolvedor web e arquiteto de sistemas brasileiro baseado em Tóquio, onde tenho trabalhado em tempo integral em empresas japonesas por mais de {years} anos. Fluente em inglês, português e japonês, adoro programar e compartilhar meu conhecimento.\n\nQuando tenho tempo livre, às vezes crio conteúdo para meu canal no YouTube, onde falo sobre desenvolvimento web para mais de {subscribers} inscritos. Também sou o criador do Edge Store, um serviço SaaS com milhares de usuários projetado para simplificar o upload de arquivos em projetos React/Next.js."
     },
     "skills": {
       "title": "Skills",
-      "frontend": {
-        "title": "Desenvolvimento Frontend",
-        "description": "React, Next.js, TypeScript, Tailwind CSS"
-      },
-      "backend": {
-        "title": "Desenvolvimento Backend",
-        "description": "Node.js, Express, PostgreSQL, MongoDB"
-      },
-      "devops": {
-        "title": "DevOps & Cloud",
-        "description": "Docker, AWS, CI/CD, Vercel"
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud-infra": "Nuvem/Infra",
+        "analytics": "Análise de Dados",
+        "ci-cd": "CI/CD"
       }
     },
-    "projects": {
-      "title": "Projetos",
-      "projectTitle": "Projeto {{number}}",
-      "projectDescription": "Descrição do projeto {{number}}. Explique o desafio, a solução e os resultados.",
-      "viewProject": "Ver Projeto"
+    "portfolio": {
+      "title": "Portfólio",
+      "youtube": {
+        "title": "Canal do YouTube",
+        "description": "Um canal no YouTube onde compartilho meu conhecimento sobre desenvolvimento web com mais de {youtubeSubscribers} inscritos.",
+        "visitChannel": "Visitar Canal"
+      },
+      "edgestore": {
+        "title": "Edge Store",
+        "description": "Uma startup SaaS bootstrapped que criei para simplificar o upload de arquivos em projetos React/Next.js.",
+        "visitWebsite": "Visitar Site"
+      },
+      "companyProjects": {
+        "title": "Projetos Empresariais",
+        "description": "Trabalhei em vários projetos para as empresas japonesas onde fui empregado, incluindo painéis administrativos internos, aplicativos relacionados a e-commerce, uma plataforma de automação de marketing, aplicativos com funcionalidade de busca em texto completo e muito mais."
+      }
     },
     "testimonials": {
-      "title": "Depoimentos",
-      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "clientName": "Nome do Cliente",
-      "company": "Empresa"
+      "title": "Depoimentos"
+    },
+    "services": {
+      "title": "Serviços",
+      "newProjectSetup": {
+        "title": "Configuração de Novo Projeto",
+        "description": "Inicie seu projeto com uma base sólida e as melhores práticas."
+      },
+      "technicalConsulting": {
+        "title": "Consultoria Técnica",
+        "description": "Aconselhamento especializado sobre arquitetura, stack tecnológica e melhores práticas."
+      },
+      "webDevelopment": {
+        "title": "Desenvolvimento Web",
+        "description": "Desenvolvimento full-stack de aplicações web responsivas e escaláveis."
+      },
+      "analyticsSetup": {
+        "title": "Configuração de Analytics",
+        "description": "Implemente análises robustas para obter insights sobre seus usuários e desempenho."
+      },
+      "ciCdSetup": {
+        "title": "Configuração de CI/CD",
+        "description": "Otimize seu fluxo de desenvolvimento com testes e implantação automatizados."
+      },
+      "performanceOptimization": {
+        "title": "Otimização de Desempenho",
+        "description": "Aumente a velocidade e eficiência da sua aplicação para uma melhor experiência do usuário."
+      }
     },
     "contact": {
       "title": "Entre em Contato",
@@ -51,11 +82,11 @@
       "email": "E-mail",
       "emailPlaceholder": "Seu e-mail",
       "message": "Mensagem",
-      "messagePlaceholder": "Sua mensagem",
+      "messagePlaceholder": "Escreva os detalhes da sua solicitação aqui",
       "sendMessage": "Enviar Mensagem"
     },
     "footer": {
-      "copyright": "© 2023 Perfect Base. Todos os direitos reservados.",
+      "copyright": "© 2024 Perfect Base. Todos os direitos reservados.",
       "termsOfService": "Termos de Serviço",
       "privacy": "Privacidade"
     }

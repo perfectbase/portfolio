@@ -1,60 +1,80 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
-import { useFormatter, useTranslations } from "next-intl";
-import { LanguageSelector } from "./language-selector";
+import { useTranslations } from "next-intl";
+import { LanguageSelector } from "./_components/language-selector";
+import { SkillsSection } from "./_sections/skills-section";
+import { PortfolioSection } from "./_sections/portfolio-section";
+import { ContactSection } from "./_sections/contact-section";
+import { ServicesSection } from "./_sections/services-section";
+import { AboutSection } from "./_sections/about-section";
+import GithubIcon from "@/components/icons/github-icon";
+import TwitterIcon from "@/components/icons/twitter-icon";
+import YouTubeIcon from "@/components/icons/youtube-icon";
+import { constants } from "@/lib/constants";
 
 export default function PortfolioPage() {
   const t = useTranslations("HomePage");
-  const format = useFormatter();
+
+  const sections = [
+    {
+      id: "about",
+      navigation: t("navigation.about"),
+      component: AboutSection,
+    },
+    {
+      id: "portfolio",
+      navigation: t("navigation.portfolio"),
+      component: PortfolioSection,
+    },
+    {
+      id: "skills",
+      navigation: t("navigation.skills"),
+      component: SkillsSection,
+    },
+    // {
+    //   id: "testimonials",
+    //   navigation: t("navigation.testimonials"),
+    //   component: TestimonialsSection,
+    // },
+    {
+      id: "services",
+      navigation: t("navigation.services"),
+      component: ServicesSection,
+    },
+    {
+      id: "contact",
+      navigation: t("navigation.contact"),
+      component: ContactSection,
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 max-w-screen-2xl items-center">
+        <div className="flex h-14 items-center">
           <nav className="mx-auto flex gap-2">
-            <Link href="#about">
-              <Button variant="ghost" className="text-sm font-medium">
-                {t("navigation.about")}
-              </Button>
-            </Link>
-            <Link href="#skills">
-              <Button variant="ghost" className="text-sm font-medium">
-                {t("navigation.skills")}
-              </Button>
-            </Link>
-            <Link href="#projects">
-              <Button variant="ghost" className="text-sm font-medium">
-                {t("navigation.projects")}
-              </Button>
-            </Link>
-            <Link href="#testimonials">
-              <Button variant="ghost" className="text-sm font-medium">
-                {t("navigation.testimonials")}
-              </Button>
-            </Link>
-            <Link href="#contact">
-              <Button variant="ghost" className="text-sm font-medium">
-                {t("navigation.contact")}
-              </Button>
-            </Link>
+            {sections.map((section) => (
+              <Link key={section.id} href={`#${section.id}`}>
+                <Button variant="ghost" className="text-sm font-medium">
+                  {section.navigation}
+                </Button>
+              </Link>
+            ))}
             <LanguageSelector />
           </nav>
         </div>
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     {t("hero.title")}
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl text-balance whitespace-pre-line">
                     {t("hero.subtitle")}
                   </p>
                 </div>
@@ -62,187 +82,62 @@ export default function PortfolioPage() {
                   <Link href="#contact">
                     <Button>{t("hero.hireMe")}</Button>
                   </Link>
-                  <Link href="#projects">
-                    <Button variant="outline">{t("hero.viewProjects")}</Button>
+                  <Link href="#portfolio">
+                    <Button variant="outline">{t("hero.viewPortfolio")}</Button>
                   </Link>
                 </div>
-              </div>
-              <Image
-                alt="Hero"
-                className="mx-auto overflow-hidden rounded-full border-4 border-purple-300 shadow-lg object-cover object-center sm:w-full lg:order-last"
-                height="550"
-                src="/img/ravi.png"
-                width="550"
-              />
-            </div>
-          </div>
-        </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              {t("about.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 whitespace-pre-line text-balance">
-              {t.rich("about.description", {
-                years: "7",
-                subscribers: format.number(10000),
-                edgestore: (children) => (
+                <div className="flex space-x-4 mt-4">
                   <Link
-                    href="https://edgestore.dev"
+                    href={constants.links.github}
                     target="_blank"
-                    className="underline font-medium"
+                    rel="noopener noreferrer"
                   >
-                    {children}
-                  </Link>
-                ),
-                youtube: (children) => (
-                  <Link
-                    href="https://www.youtube.com/@perfectbase"
-                    target="_blank"
-                    className="underline font-medium"
-                  >
-                    {children}
-                  </Link>
-                ),
-              })}
-            </p>
-          </div>
-        </section>
-        <section
-          id="skills"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
-        >
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              {t("skills.title")}
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    {t("skills.frontend.title")}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {t("skills.frontend.description")}
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    {t("skills.backend.title")}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {t("skills.backend.description")}
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    {t("skills.devops.title")}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {t("skills.devops.description")}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        {/* <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              {t("projects.title")}
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-2">
-              {[1, 2, 3, 4].map((project) => (
-                <Card key={project}>
-                  <CardContent className="p-6">
-                    <Image
-                      alt={`Project ${project}`}
-                      className="w-full h-48 object-cover rounded-lg mb-4"
-                      height="200"
-                      src="/placeholder.svg"
-                      width="400"
-                    />
-                    <h3 className="text-2xl font-bold mb-2">
-                      {t("projects.projectTitle", { number: project })}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      {t("projects.projectDescription", { number: project })}
-                    </p>
-                    <Button variant="outline">
-                      {t("projects.viewProject")}
+                    <Button variant="ghost" size="icon">
+                      <GithubIcon className="h-5 w-5" />
+                      <span className="sr-only">GitHub</span>
                     </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section
-          id="testimonials"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
-        >
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              {t("testimonials.title")}
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-2">
-              {[1, 2].map((testimonial) => (
-                <TestimonialCard
-                  key={testimonial}
-                  rating={5}
-                  testimonial={t("testimonials.testimonial")}
-                  clientName={t("testimonials.clientName")}
-                  company={t("testimonials.company")}
-                  image="/placeholder.svg"
-                />
-              ))}
-            </div>
-          </div>
-        </section> */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8">
-              {t("contact.title")}
-            </h2>
-            <form className="max-w-md mx-auto">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <label htmlFor="name">{t("contact.name")}</label>
-                  <Input
-                    id="name"
-                    placeholder={t("contact.namePlaceholder")}
-                    required
-                  />
+                  </Link>
+                  <Link
+                    href={constants.links.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="ghost" size="icon">
+                      <TwitterIcon className="h-5 w-5" />
+                      <span className="sr-only">Twitter</span>
+                    </Button>
+                  </Link>
+                  <Link
+                    href={constants.links.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="ghost" size="icon">
+                      <YouTubeIcon className="h-5 w-5" />
+                      <span className="sr-only">YouTube</span>
+                    </Button>
+                  </Link>
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="email">{t("contact.email")}</label>
-                  <Input
-                    id="email"
-                    placeholder={t("contact.emailPlaceholder")}
-                    required
-                    type="email"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message">{t("contact.message")}</label>
-                  <Textarea
-                    className="min-h-[100px]"
-                    id="message"
-                    placeholder={t("contact.messagePlaceholder")}
-                    required
-                  />
-                </div>
-                <Button className="w-full" type="submit">
-                  {t("contact.sendMessage")}
-                </Button>
               </div>
-            </form>
+              <div className="max-w-80 aspect-[3/4] mx-auto p-4 w-full order-first lg:order-last">
+                <Image
+                  src="/img/ravi.png"
+                  className="overflow-hidden w-full h-full rounded-3xl shadow-lg shadow-black/40 object-cover object-center lg:order-last"
+                  alt="Hero"
+                  height="600"
+                  width="600"
+                />
+              </div>
+            </div>
           </div>
         </section>
+        {sections.map((section, index) => (
+          <section.component
+            key={section.id}
+            id={section.id}
+            className={index % 2 === 0 ? "bg-muted" : ""}
+          />
+        ))}
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">{t("footer.copyright")}</p>

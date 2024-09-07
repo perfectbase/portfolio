@@ -1,56 +1,92 @@
 {
   "HomePage": {
     "navigation": {
+      "about": "自己紹介",
       "skills": "スキル",
-      "projects": "プロジェクト",
-      "testimonials": "お客様の声",
+      "portfolio": "ポートフォリオ",
+      "testimonials": "推薦の声",
+      "services": "サービス",
       "contact": "お問い合わせ"
     },
     "hero": {
-      "title": "Ravi (ハヴィー)",
-      "subtitle": "ウェブ開発者＆コンサルタント。アイデアを強力なデジタルソリューションに変換します。",
-      "hireMe": "依頼する",
-      "viewProjects": "プロジェクトを見る"
+      "title": "Ravi（ハヴィー）です！",
+      "subtitle": "東京在住のウェブ開発者兼システムアーキテクトです。",
+      "hireMe": "仕事を依頼する",
+      "viewPortfolio": "ポートフォリオを見る"
+    },
+    "about": {
+      "title": "自己紹介",
+      "description": "はじめまして！東京在住のブラジル人ウェブ開発者兼システムアーキテクトです。日本企業でフルタイムとして{years}年以上働いています。英語、ポルトガル語、日本語を話し、コーディングと知識の共有が大好きです。\n\n空き時間には、YouTubeチャンネルでウェブ開発についてのコンテンツを作成し、{subscribers}人以上の登録者に向けて発信しています。また、React/Next.jsプロジェクトのファイルアップロードを簡素化するために設計された、数千人のユーザーを持つSaaSサービス「Edge Store」の開発者でもあります。"
     },
     "skills": {
       "title": "スキル",
-      "frontend": {
-        "title": "フロントエンド開発",
-        "description": "React、Next.js、TypeScript、Tailwind CSS"
-      },
-      "backend": {
-        "title": "バックエンド開発",
-        "description": "Node.js、Express、PostgreSQL、MongoDB"
-      },
-      "devops": {
-        "title": "DevOps＆クラウド",
-        "description": "Docker、AWS、CI/CD、Vercel"
+      "categories": {
+        "frontend": "フロントエンド",
+        "backend": "バックエンド",
+        "cloud-infra": "クラウド/インフラ",
+        "analytics": "アナリティクス",
+        "ci-cd": "CI/CD"
       }
     },
-    "projects": {
-      "title": "プロジェクト",
-      "projectTitle": "プロジェクト{{number}}",
-      "projectDescription": "プロジェクト{{number}}の説明。課題、解決策、結果について説明します。",
-      "viewProject": "プロジェクトを見る"
+    "portfolio": {
+      "title": "ポートフォリオ",
+      "youtube": {
+        "title": "YouTubeチャンネル",
+        "description": "ウェブ開発に関する知識を{youtubeSubscribers}人以上の登録者と共有しているYouTubeチャンネルです。",
+        "visitChannel": "チャンネルを見る"
+      },
+      "edgestore": {
+        "title": "Edge Store",
+        "description": "React/Next.jsプロジェクトでのファイルアップロードを簡素化するために作成した、ブートストラップ型のSaaSスタートアップです。",
+        "visitWebsite": "ウェブサイトを見る"
+      },
+      "companyProjects": {
+        "title": "企業プロジェクト",
+        "description": "勤務した日本企業で、社内管理ダッシュボード、Eコマース関連アプリ、マーケティング自動化プラットフォーム、全文検索機能を持つアプリなど、多数のプロジェクトに携わりました。"
+      }
     },
     "testimonials": {
-      "title": "お客様の声",
-      "testimonial": "ここにお客様の声が入ります。プロジェクトの成果や協力の経験について述べられます。",
-      "clientName": "クライアント名",
-      "company": "会社名"
+      "title": "推薦の声"
+    },
+    "services": {
+      "title": "サービス",
+      "newProjectSetup": {
+        "title": "新規プロジェクトのセットアップ",
+        "description": "堅固な基盤とベストプラクティスでプロジェクトを開始します。"
+      },
+      "technicalConsulting": {
+        "title": "技術コンサルティング",
+        "description": "アーキテクチャ、技術スタック、ベストプラクティスに関する専門的なアドバイスを提供します。"
+      },
+      "webDevelopment": {
+        "title": "ウェブ開発",
+        "description": "レスポンシブでスケーラブルなウェブアプリケーションのフルスタック開発を行います。"
+      },
+      "analyticsSetup": {
+        "title": "アナリティクスのセットアップ",
+        "description": "ユーザーとパフォーマンスに関する洞察を得るための堅牢なアナリティクスを実装します。"
+      },
+      "ciCdSetup": {
+        "title": "CI/CDのセットアップ",
+        "description": "自動テストとデプロイメントで開発ワークフローを効率化します。"
+      },
+      "performanceOptimization": {
+        "title": "パフォーマンス最適化",
+        "description": "より良いユーザー体験のためにアプリケーションの速度と効率性を向上させます。"
+      }
     },
     "contact": {
       "title": "お問い合わせ",
       "name": "お名前",
-      "namePlaceholder": "あなたのお名前",
+      "namePlaceholder": "お名前を入力してください",
       "email": "メールアドレス",
-      "emailPlaceholder": "あなたのメールアドレス",
+      "emailPlaceholder": "メールアドレスを入力してください",
       "message": "メッセージ",
-      "messagePlaceholder": "あなたのメッセージ",
-      "sendMessage": "メッセージを送信"
+      "messagePlaceholder": "依頼の詳細をここに記入してください",
+      "sendMessage": "送信する"
     },
     "footer": {
-      "copyright": "© 2023 Perfect Base. All rights reserved.",
+      "copyright": "© 2024 Perfect Base. All rights reserved.",
       "termsOfService": "利用規約",
       "privacy": "プライバシーポリシー"
     }

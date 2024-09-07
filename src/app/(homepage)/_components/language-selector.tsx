@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { setLanguage } from "./actions";
+import { setLanguage } from "../actions";
 import Image from "next/image";
 
 const languages = [

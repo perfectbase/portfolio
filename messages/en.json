@@ -3,46 +3,77 @@
     "navigation": {
       "about": "About",
       "skills": "Skills",
-      "projects": "Projects",
+      "portfolio": "Portfolio",
       "testimonials": "Testimonials",
+      "services": "Services",
       "contact": "Contact"
     },
     "hero": {
-      "title": "Ravi",
-      "subtitle": "Web Developer & Consultant. Transforming ideas into powerful digital solutions.",
-      "hireMe": "Hire Me",
-      "viewProjects": "View Projects"
+      "title": "Hi, I'm Ravi!",
+      "subtitle": "A Web Developer and System Architect based in Tokyo.",
+      "hireMe": "Request a Job",
+      "viewPortfolio": "View Portfolio"
     },
     "about": {
-      "title": "About Me",
-      "description": "Hey there! I'm a Brazilian web developer and system architect based in Tokyo, where I’ve been working full-time in Japanese companies for over {years} years. Fluent in English, Portuguese, and Japanese, I love coding and sharing my knowledge.\n\nWhen I have free time, I sometimes create content for my <youtube>YouTube channel</youtube>, where I talk about web development with over {subscribers} subscribers. I’m also the creator of <edgestore>Edge Store</edgestore>, a SaaS service with thousands of users designed to simplify file uploads for React/Next.js projects."
+      "title": "About",
+      "description": "Hey there! I'm a Brazilian web developer and system architect based in Tokyo, where I've been working full-time in Japanese companies for over {years} years. Fluent in English, Portuguese, and Japanese, I love coding and sharing my knowledge.\n\nWhen I have free time, I sometimes create content for my YouTube channel, where I talk about web development with over {subscribers} subscribers. I'm also the creator of Edge Store, a SaaS service with thousands of users designed to simplify file uploads for React/Next.js projects."
     },
     "skills": {
       "title": "Skills",
-      "frontend": {
-        "title": "Frontend Development",
-        "description": "React, Next.js, TypeScript, Tailwind CSS"
-      },
-      "backend": {
-        "title": "Backend Development",
-        "description": "Node.js, Express, PostgreSQL, MongoDB"
-      },
-      "devops": {
-        "title": "DevOps & Cloud",
-        "description": "Docker, AWS, CI/CD, Vercel"
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud-infra": "Cloud/Infra",
+        "analytics": "Analytics",
+        "ci-cd": "CI/CD"
       }
     },
-    "projects": {
-      "title": "Projects",
-      "projectTitle": "Project {{number}}",
-      "projectDescription": "Description of project {{number}}. Explain the challenge, solution, and results.",
-      "viewProject": "View Project"
+    "portfolio": {
+      "title": "Portfolio",
+      "youtube": {
+        "title": "YouTube Channel",
+        "description": "A YouTube channel where I share my knowledge about web development with over {youtubeSubscribers} subscribers.",
+        "visitChannel": "Visit Channel"
+      },
+      "edgestore": {
+        "title": "Edge Store",
+        "description": "A bootstrapped SaaS startup that I created to simplify uploading files in React/Next.js projects.",
+        "visitWebsite": "Visit Website"
+      },
+      "companyProjects": {
+        "title": "Company Projects",
+        "description": "I've worked on several projects for the Japanese companies I've been employed at, including internal admin dashboards, e-commerce related apps, a marketing automation platform, apps with full-text search functionality, and more."
+      }
     },
     "testimonials": {
-      "title": "Testimonials",
-      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "clientName": "Client Name",
-      "company": "Company"
+      "title": "Testimonials"
+    },
+    "services": {
+      "title": "Services",
+      "newProjectSetup": {
+        "title": "New Project Setup",
+        "description": "Kickstart your project with a solid foundation and best practices."
+      },
+      "technicalConsulting": {
+        "title": "Technical Consulting",
+        "description": "Expert advice on architecture, technology stack, and best practices."
+      },
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Full-stack development of responsive and scalable web applications."
+      },
+      "analyticsSetup": {
+        "title": "Analytics Setup",
+        "description": "Implement robust analytics to gain insights into your users and performance."
+      },
+      "ciCdSetup": {
+        "title": "CI/CD Setup",
+        "description": "Streamline your development workflow with automated testing and deployment."
+      },
+      "performanceOptimization": {
+        "title": "Performance Optimization",
+        "description": "Boost your application's speed and efficiency for a better user experience."
+      }
     },
     "contact": {
       "title": "Contact Me",
@@ -51,11 +82,11 @@
       "email": "Email",
       "emailPlaceholder": "Your email",
       "message": "Message",
-      "messagePlaceholder": "Your message",
+      "messagePlaceholder": "Write the details of your request here",
       "sendMessage": "Send Message"
     },
     "footer": {
-      "copyright": "© 2023 Perfect Base. All rights reserved.",
+      "copyright": "© 2024 Perfect Base. All rights reserved.",
       "termsOfService": "Terms of Service",
       "privacy": "Privacy"
     }

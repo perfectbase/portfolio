@@ -1,8 +1,37 @@
+import { Section } from "../_components/section";
+import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
-import { StarIcon } from "lucide-react";
 import Image from "next/image";
+import { StarIcon } from "lucide-react";
 
-export default function TestimonialCard(props: {
+export function TestimonialsSection({
+  id,
+  className,
+}: {
+  id: string;
+  className?: string;
+}) {
+  const t = useTranslations("HomePage");
+
+  return (
+    <Section id={id} title={t("testimonials.title")} className={className}>
+      <div className="grid gap-6 lg:grid-cols-2">
+        {[1, 2].map((testimonial) => (
+          <TestimonialCard
+            key={testimonial}
+            rating={5}
+            testimonial={t("testimonials.testimonial")}
+            clientName={t("testimonials.clientName")}
+            company={t("testimonials.company")}
+            image="/placeholder.svg"
+          />
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function TestimonialCard(props: {
   rating: number;
   testimonial: string;
   clientName: string;
