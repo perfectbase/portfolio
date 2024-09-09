@@ -13,6 +13,7 @@ import YouTubeIcon from "@/components/icons/youtube-icon";
 import { constants } from "@/lib/constants";
 import { Header } from "./_components/header";
 import { unstable_setRequestLocale } from "next-intl/server";
+import raviPic from "@/../public/img/ravi.webp";
 
 export type Section = {
   id: string;
@@ -125,10 +126,11 @@ export default function PortfolioPage({
               </div>
               <div className="relative max-w-60 md:max-w-80 aspect-square md:aspect-[3/4] mx-auto p-4 w-full order-first lg:order-last">
                 <Image
-                  src="/img/ravi.webp"
+                  src={raviPic}
                   className="rounded-full md:rounded-3xl shadow-lg shadow-black/40 object-cover lg:order-last"
-                  alt="Hero"
+                  alt="Ravi"
                   fill
+                  placeholder="blur"
                   priority
                 />
               </div>
