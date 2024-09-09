@@ -16,7 +16,7 @@
     },
     "about": {
       "title": "About",
-      "description": "Hey there! I'm a Brazilian web developer and system architect based in Tokyo, where I've been working full-time in Japanese companies for over {years} years. Fluent in English, Portuguese, and Japanese, I love coding and sharing my knowledge.\n\nWhen I have free time, I sometimes create content for my YouTube channel, where I talk about web development with over {subscribers} subscribers. I'm also the creator of Edge Store, a SaaS service with thousands of users designed to simplify file uploads for React/Next.js projects."
+      "description": "Hi! I'm a Brazilian web developer and system architect based in Tokyo, where I've been working full-time in Japanese companies for over {years} years. Fluent in English, Portuguese, and Japanese, I love coding and sharing my knowledge.\n\nWhen I have free time, I sometimes create content for my YouTube channel, where I talk about web development with over {subscribers} subscribers. I'm also the creator of Edge Store, a SaaS service with thousands of users designed to simplify file uploads for React/Next.js projects."
     },
     "skills": {
       "title": "Skills",
