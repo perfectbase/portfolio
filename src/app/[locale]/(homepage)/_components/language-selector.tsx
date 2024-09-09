@@ -26,7 +26,10 @@ function LanguageSelector() {
 
   return (
     <Select value={locale} onValueChange={(value) => router.push(`/${value}`)}>
-      <SelectTrigger className="border-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent bg-transparent">
+      <SelectTrigger
+        aria-label="Language selector"
+        className="border-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent bg-transparent"
+      >
         <div className="w-5 h-5 relative flex items-center justify-center">
           <Image
             src={currentLanguage?.flag || ""}
