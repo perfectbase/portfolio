@@ -126,6 +126,7 @@ export default function PortfolioPage() {
                   alt="Hero"
                   height="600"
                   width="600"
+                  priority
                 />
               </div>
             </div>
