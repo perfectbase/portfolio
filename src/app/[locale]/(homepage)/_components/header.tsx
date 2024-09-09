@@ -20,6 +20,7 @@ export function Header({
       <div className="md:container mx-auto px-4">
         <div className="flex h-14 items-center justify-between">
           <Button
+            aria-label="Menu"
             variant="ghost"
             size="icon"
             className="md:hidden"

@@ -21,6 +21,7 @@
     "skills": {
       "title": "Skills",
       "categories": {
+        "all": "Todos",
         "frontend": "Frontend",
         "backend": "Backend",
         "cloud-infra": "Nuvem/Infra",

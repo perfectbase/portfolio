@@ -91,7 +91,7 @@ export function SkillsSection({
           variant={activeFilter === "All" ? "default" : "outline"}
           onClick={() => setActiveFilter("All")}
         >
-          All
+          {t("skills.categories.all")}
         </Button>
         {categories.map((category) => (
           <Button

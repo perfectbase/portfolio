@@ -21,6 +21,7 @@
     "skills": {
       "title": "スキル",
       "categories": {
+        "all": "すべて",
         "frontend": "フロントエンド",
         "backend": "バックエンド",
         "cloud-infra": "クラウド/インフラ",
