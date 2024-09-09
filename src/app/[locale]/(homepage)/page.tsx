@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { SkillsSection } from "./_sections/skills-section";
-import { PortfolioSection } from "./_sections/portfolio-section";
-import { ContactSection } from "./_sections/contact-section";
-import { ServicesSection } from "./_sections/services-section";
-import { AboutSection } from "./_sections/about-section";
+// import { SkillsSection } from "./_sections/skills-section";
+// import { PortfolioSection } from "./_sections/portfolio-section";
+// import { ContactSection } from "./_sections/contact-section";
+// import { ServicesSection } from "./_sections/services-section";
+// import { AboutSection } from "./_sections/about-section";
 import GithubIcon from "@/components/icons/github-icon";
 import TwitterIcon from "@/components/icons/twitter-icon";
 import YouTubeIcon from "@/components/icons/youtube-icon";
@@ -29,36 +29,36 @@ export default function PortfolioPage({
   const t = useTranslations("HomePage");
 
   const sections: Section[] = [
-    {
-      id: "about",
-      navigation: t("navigation.about"),
-      component: AboutSection,
-    },
-    {
-      id: "portfolio",
-      navigation: t("navigation.portfolio"),
-      component: PortfolioSection,
-    },
-    {
-      id: "skills",
-      navigation: t("navigation.skills"),
-      component: SkillsSection,
-    },
     // {
-    //   id: "testimonials",
-    //   navigation: t("navigation.testimonials"),
-    //   component: TestimonialsSection,
+    //   id: "about",
+    //   navigation: t("navigation.about"),
+    //   component: AboutSection,
     // },
-    {
-      id: "services",
-      navigation: t("navigation.services"),
-      component: ServicesSection,
-    },
-    {
-      id: "contact",
-      navigation: t("navigation.contact"),
-      component: ContactSection,
-    },
+    // {
+    //   id: "portfolio",
+    //   navigation: t("navigation.portfolio"),
+    //   component: PortfolioSection,
+    // },
+    // {
+    //   id: "skills",
+    //   navigation: t("navigation.skills"),
+    //   component: SkillsSection,
+    // },
+    // // {
+    // //   id: "testimonials",
+    // //   navigation: t("navigation.testimonials"),
+    // //   component: TestimonialsSection,
+    // // },
+    // {
+    //   id: "services",
+    //   navigation: t("navigation.services"),
+    //   component: ServicesSection,
+    // },
+    // {
+    //   id: "contact",
+    //   navigation: t("navigation.contact"),
+    //   component: ContactSection,
+    // },
   ];
 
   return (
