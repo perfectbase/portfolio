@@ -82,7 +82,7 @@ export default function PortfolioPage({
                     {t("hero.subtitle")}
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[300px]:flex-row">
                   <Link href="#contact">
                     <Button>{t("hero.hireMe")}</Button>
                   </Link>
@@ -125,11 +125,10 @@ export default function PortfolioPage({
               </div>
               <div className="relative max-w-60 md:max-w-80 aspect-square md:aspect-[3/4] mx-auto p-4 w-full order-first lg:order-last">
                 <Image
-                  src="/img/ravi.png"
-                  className="absolute inset-0 w-full h-full rounded-full md:rounded-3xl shadow-lg shadow-black/40 object-cover lg:order-last"
+                  src="/img/ravi.webp"
+                  className="rounded-full md:rounded-3xl shadow-lg shadow-black/40 object-cover lg:order-last"
                   alt="Hero"
-                  height="600"
-                  width="600"
+                  fill
                   priority
                 />
               </div>
