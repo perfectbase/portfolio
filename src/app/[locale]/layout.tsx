@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
-
-export const runtime = "edge";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+import { Inter } from "next/font/google";
+import "@/app/globals.css";
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,14 +13,18 @@ export const metadata: Metadata = {
     "Experienced web developer and system architect based in Tokyo. Specializing in full-stack development, cloud infrastructure, and creating efficient, scalable web applications.",
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
-
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
@@ -31,4 +34,8 @@ export default async function RootLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }

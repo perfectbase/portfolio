@@ -7,9 +7,7 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { setLanguage } from "../actions";
 import Image from "next/image";
 
 const languages = [
@@ -21,26 +19,13 @@ const languages = [
 function LanguageSelector() {
   const locale = useLocale();
   const router = useRouter();
-  const [, startTransition] = useTransition();
-
-  const switchLanguage = async (newLocale: string) => {
-    await setLanguage(newLocale);
-    router.refresh();
-  };
 
   const currentLanguage = languages.find(
     (language) => language.code === locale
   );
 
   return (
-    <Select
-      value={locale}
-      onValueChange={(value) =>
-        startTransition(() => {
-          switchLanguage(value);
-        })
-      }
-    >
+    <Select value={locale} onValueChange={(value) => router.push(`/${value}`)}>
       <SelectTrigger className="border-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent bg-transparent">
         <div className="w-5 h-5 relative flex items-center justify-center">
           <Image

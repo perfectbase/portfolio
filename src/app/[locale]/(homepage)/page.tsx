@@ -12,8 +12,7 @@ import TwitterIcon from "@/components/icons/twitter-icon";
 import YouTubeIcon from "@/components/icons/youtube-icon";
 import { constants } from "@/lib/constants";
 import { Header } from "./_components/header";
-
-export const runtime = "edge";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export type Section = {
   id: string;
@@ -21,7 +20,12 @@ export type Section = {
   component: React.FC<{ id: string; className?: string }>;
 };
 
-export default function PortfolioPage() {
+export default function PortfolioPage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("HomePage");
 
   const sections: Section[] = [
