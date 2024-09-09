@@ -13,6 +13,8 @@ import YouTubeIcon from "@/components/icons/youtube-icon";
 import { constants } from "@/lib/constants";
 import { Header } from "./_components/header";
 
+export const runtime = "edge";
+
 export type Section = {
   id: string;
   navigation: string;
