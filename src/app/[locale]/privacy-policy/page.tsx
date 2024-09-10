@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { useFormatter, useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { LanguageSelector } from "../(homepage)/_components/language-selector";
 
 export default function Page({
   params: { locale },
@@ -26,12 +27,14 @@ export default function Page({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      <Link
-        href="/"
-        className="inline-block mb-6 text-blue-600 hover:underline"
-      >
-        &larr; {t("backToHome")}
-      </Link>
+      <div className="flex items-center mb-6">
+        <Link href="/" className="inline-block text-blue-600 hover:underline">
+          &larr; {t("backToHome")}
+        </Link>
+        <div>
+          <LanguageSelector />
+        </div>
+      </div>
 
       <h1 className="text-3xl font-bold text-gray-900 mb-6">{t("title")}</h1>
 

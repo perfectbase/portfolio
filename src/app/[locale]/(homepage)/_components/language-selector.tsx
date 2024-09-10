@@ -7,8 +7,8 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { type Locale, usePathname, useRouter } from "@/i18n/routing";
 
 const languages = [
   { code: "en", name: "English", flag: "/img/flags/en.svg" },
@@ -19,13 +19,19 @@ const languages = [
 function LanguageSelector() {
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
 
   const currentLanguage = languages.find(
     (language) => language.code === locale
   );
 
   return (
-    <Select value={locale} onValueChange={(value) => router.push(`/${value}`)}>
+    <Select
+      value={locale}
+      onValueChange={(value: Locale) =>
+        router.push(pathname, { locale: value })
+      }
+    >
       <SelectTrigger
         aria-label="Language selector"
         className="border-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent bg-transparent"
