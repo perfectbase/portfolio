@@ -91,5 +91,92 @@
       "termsOfService": "Termos de Serviço",
       "privacy": "Privacidade"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidade",
+    "effectiveDate": "Data de Vigência: {date}",
+    "introduction": "Na Perfect Base, valorizo sua privacidade e estou comprometido em proteger suas informações pessoais. Esta Política de Privacidade explica como eu coleto, uso e divulgo informações quando você visita meu site ou usa meus serviços.",
+    "backToHome": "Voltar para a Página Inicial",
+    "sections": [
+      {
+        "title": "Informações que Coleto",
+        "content": "Posso coletar informações pessoais como:",
+        "items": [
+          "Nome, endereço de e-mail e informações de contato quando você me contata ou se inscreve para serviços.",
+          "Informações sobre suas interações com meu site (por exemplo, endereço IP, tipo de navegador).",
+          "Detalhes de pagamento para processar transações através de provedores terceirizados seguros como o Stripe."
+        ]
+      },
+      {
+        "title": "Como Uso as Informações",
+        "content": "Uso suas informações para:",
+        "items": [
+          "Fornecer e melhorar meus serviços.",
+          "Comunicar-me com você sobre seu projeto ou consultas.",
+          "Processar pagamentos e emitir faturas.",
+          "Analisar o uso e o desempenho do site."
+        ]
+      },
+      {
+        "title": "Compartilhamento de Dados",
+        "content": "Não vendo, alugo ou troco suas informações pessoais. Posso compartilhar informações com serviços terceirizados confiáveis, como o Stripe para processamento de pagamentos, ou com autoridades legais se exigido por lei."
+      },
+      {
+        "title": "Segurança de Dados",
+        "content": "Tomo precauções razoáveis para proteger seus dados contra acesso não autorizado, divulgação ou destruição. No entanto, nenhum método de transmissão pela internet é 100% seguro."
+      },
+      {
+        "title": "Seus Direitos",
+        "content": "Você tem o direito de acessar, atualizar ou excluir suas informações pessoais. Para fazer isso, entre em contato comigo através do formulário de contato neste site."
+      },
+      {
+        "title": "Compartilhamento de Conteúdo",
+        "content": "Como parte do meu trabalho como criador de conteúdo de desenvolvimento web, posso compartilhar insights gerais ou lições aprendidas dos projetos em que trabalho através de conteúdo educacional e profissional (por exemplo, vídeos no YouTube). Não divulgarei nenhuma informação pessoal ou específica da empresa, a menos que tenha recebido consentimento explícito do empregador ou cliente. Se você não quiser que seu projeto ou detalhes sejam compartilhados, por favor, me notifique por escrito."
+      },
+      {
+        "title": "Alterações nesta Política",
+        "content": "Posso atualizar esta Política de Privacidade de tempos em tempos. Quaisquer alterações serão publicadas nesta página, e o uso continuado de meus serviços constitui aceitação dessas alterações."
+      }
+    ]
+  },
+  "TermsOfService": {
+    "backToHome": "Voltar para a Página Inicial",
+    "pageTitle": "Termos de Serviço",
+    "effectiveDate": "Data de Vigência: {date}",
+    "welcomeMessage": "Bem-vindo aos serviços da Perfect Base. Ao acessar ou usar meu site e serviços, você concorda em estar vinculado aos seguintes Termos de Serviço.",
+    "sections": [
+      {
+        "title": "Serviços",
+        "content": "Ofereço serviços como configuração de novos projetos, consultoria técnica, desenvolvimento web, configuração de análises, configuração de CI/CD e otimização de desempenho. Os detalhes específicos de cada serviço serão discutidos e acordados em um contrato ou proposta separada."
+      },
+      {
+        "title": "Pagamento e Faturamento",
+        "content": "Todos os pagamentos são processados de forma segura via Stripe ou Transferência Bancária. Você concorda em fornecer informações de pagamento precisas e me autoriza a cobrar o valor acordado pelos serviços prestados. Os termos de pagamento e preços serão discutidos e acordados em um contrato ou proposta separada."
+      },
+      {
+        "title": "Propriedade Intelectual",
+        "content": "Todo o conteúdo, código e entregáveis criados durante o curso de nosso compromisso permanecem minha propriedade intelectual até que o pagamento total seja feito. Após o pagamento, você recebe os direitos dos entregáveis para o seu projeto."
+      },
+      {
+        "title": "Responsabilidades do Cliente",
+        "content": "Você concorda em fornecer feedback, informações e acesso oportunos conforme necessário para que eu complete o projeto. Atrasos no fornecimento de feedback ou informações podem resultar em atrasos no projeto."
+      },
+      {
+        "title": "Limitação de Responsabilidade",
+        "content": "Não sou responsável por quaisquer danos decorrentes do uso de meus serviços, incluindo, mas não se limitando a, perda de dados, perda de receita ou quaisquer outros danos. Minha responsabilidade é limitada às taxas pagas por você pelos serviços em questão."
+      },
+      {
+        "title": "Rescisão",
+        "content": "Qualquer uma das partes pode rescindir o contrato de serviço a qualquer momento, fornecendo notificação por escrito. Após a rescisão, você será faturado por qualquer trabalho concluído ou serviços prestados até a data da rescisão."
+      },
+      {
+        "title": "Compartilhamento de Conteúdo e Confidencialidade",
+        "content": "Como criador de conteúdo de desenvolvimento web, posso compartilhar insights gerais, lições aprendidas ou detalhes técnicos sobre projetos em que trabalho para fins educacionais. Mantenho estritamente a confidencialidade de informações pessoais e da empresa, a menos que tenha obtido permissão explícita para compartilhar tais detalhes. Se você deseja que seu projeto permaneça completamente confidencial, forneça uma notificação por escrito no início do projeto."
+      },
+      {
+        "title": "Alterações nos Termos",
+        "content": "Reservo-me o direito de atualizar estes Termos de Serviço a qualquer momento. As alterações serão publicadas nesta página, e o uso continuado de meus serviços indica aceitação dessas alterações."
+      }
+    ]
   }
 }

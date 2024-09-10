@@ -91,5 +91,92 @@
       "termsOfService": "Terms of Service",
       "privacy": "Privacy"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: {date}",
+    "introduction": "At Perfect Base, I value your privacy and am committed to protecting your personal information. This Privacy Policy explains how I collect, use, and disclose information when you visit my website or use my services.",
+    "backToHome": "Back to Home",
+    "sections": [
+      {
+        "title": "Information I Collect",
+        "content": "I may collect personal information such as:",
+        "items": [
+          "Name, email address, and contact information when you contact me or sign up for services.",
+          "Information about your interactions with my website (e.g., IP address, browser type).",
+          "Payment details for processing transactions through secure third-party providers like Stripe."
+        ]
+      },
+      {
+        "title": "How I Use Information",
+        "content": "I use your information to:",
+        "items": [
+          "Provide and improve my services.",
+          "Communicate with you regarding your project or inquiries.",
+          "Process payments and issue invoices.",
+          "Analyze website usage and performance."
+        ]
+      },
+      {
+        "title": "Data Sharing",
+        "content": "I do not sell, rent, or trade your personal information. I may share information with trusted third-party services such as Stripe for payment processing, or with legal authorities if required by law."
+      },
+      {
+        "title": "Data Security",
+        "content": "I take reasonable precautions to protect your data from unauthorized access, disclosure, or destruction. However, no method of transmission over the internet is 100% secure."
+      },
+      {
+        "title": "Your Rights",
+        "content": "You have the right to access, update, or delete your personal information. To do so, please contact me from the contact form on this website."
+      },
+      {
+        "title": "Content Sharing",
+        "content": "As part of my work as a web development content creator, I may share general insights or lessons learned from the projects I work on through educational and professional content (e.g., YouTube videos). I will not disclose any personal or company-specific information unless I have received explicit consent from the employer or client. If you do not want your project or details to be shared, please notify me in writing."
+      },
+      {
+        "title": "Changes to This Policy",
+        "content": "I may update this Privacy Policy from time to time. Any changes will be posted on this page, and your continued use of my services constitutes acceptance of these changes."
+      }
+    ]
+  },
+  "TermsOfService": {
+    "backToHome": "Back to Home",
+    "pageTitle": "Terms of Service",
+    "effectiveDate": "Effective Date: {date}",
+    "welcomeMessage": "Welcome to Perfect Base's services. By accessing or using my website and services, you agree to be bound by the following Terms of Service.",
+    "sections": [
+      {
+        "title": "Services",
+        "content": "I offer services such as new project setup, technical consulting, web development, analytics setup, CI/CD setup, and performance optimization. The specifics of each service will be discussed and agreed upon in a separate contract or proposal."
+      },
+      {
+        "title": "Payment and Billing",
+        "content": "All payments are processed securely via Stripe or Bank Transfer. You agree to provide accurate payment information and authorize me to charge the agreed-upon amount for services rendered. Payment terms and prices will be discussed and agreed upon in a separate contract or proposal."
+      },
+      {
+        "title": "Intellectual Property",
+        "content": "All content, code, and deliverables created during the course of our engagement remain my intellectual property until full payment is made. Upon payment, you receive the rights to the deliverables for your project."
+      },
+      {
+        "title": "Client Responsibilities",
+        "content": "You agree to provide timely feedback, information, and access as necessary for me to complete the project. Delays in providing feedback or information may result in project delays."
+      },
+      {
+        "title": "Limitation of Liability",
+        "content": "I am not liable for any damages arising from the use of my services, including but not limited to data loss, revenue loss, or any other damages. My liability is limited to the fees paid by you for the services in question."
+      },
+      {
+        "title": "Termination",
+        "content": "Either party may terminate the service agreement at any time by providing written notice. Upon termination, you will be invoiced for any completed work or services rendered up until the date of termination."
+      },
+      {
+        "title": "Content Sharing and Confidentiality",
+        "content": "As a web development content creator, I may share general insights, lessons learned, or technical details about projects I work on for educational purposes. I strictly maintain the confidentiality of personal and company information unless I have obtained explicit permission to share such details. If you wish for your project to remain completely confidential, please provide written notice at the start of the project."
+      },
+      {
+        "title": "Changes to Terms",
+        "content": "I reserve the right to update these Terms of Service at any time. Changes will be posted on this page, and your continued use of my services indicates acceptance of these changes."
+      }
+    ]
   }
 }
