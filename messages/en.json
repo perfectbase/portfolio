@@ -1,5 +1,5 @@
 {
-  "HomePage": {
+  "home_page": {
     "navigation": {
       "about": "About",
       "skills": "Skills",
@@ -12,7 +12,7 @@
       "title": "Hi, I'm Ravi!",
       "subtitle": "A Web Developer and System Architect based in Tokyo.",
       "hireMe": "Request a Job",
-      "viewPortfolio": "View Portfolio"
+      "view_portfolio": "View Portfolio"
     },
     "about": {
       "title": "About",
